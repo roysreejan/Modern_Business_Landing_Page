@@ -8,6 +8,7 @@ import PricingSection from "./components/PricingSection";
 import PurposeSection from "./components/PurposeSection";
 import ScheduleSection from './components/ScheduleSection';
 import ServicesSection from "./components/ServicesSection";
+import TestimonialsSection from "./components/TestimonialSection";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <MonitorSection />
         <PricingSection />
         <ServicesSection />
+        <TestimonialsSection />
       </div>
     </main>
   );
