@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const FeaturesSection = () => {
   const features = [
@@ -19,46 +21,81 @@ const FeaturesSection = () => {
     },
   ];
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <motion.section
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      className="max-w-7xl mx-auto px-4 py-16"
+    >
       {/* heading texts */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">How can we help business?</h2>
-        <p className="text-gray-600">
+      <motion.div variants={fadeIn("up", 0.3)} className="text-center mb-12">
+        <motion.h2
+          variants={textVariant(0.2)}
+          className="text-3xl font-bold mb-4"
+        >
+          How can we help business?
+        </motion.h2>
+        <motion.p variants={fadeIn("up", 0.4)} className="text-gray-600">
           When you resell besnik, you build trust and increase
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       {/* features box */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <motion.div
+        variants={fadeIn("up", 0.5)}
+        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+      >
         {features.map((feature, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={fadeIn("up", 0.3 * (index + 1))}
             className="flex flex-col text-center items-center p-6"
           >
-            <div
+            <motion.div
+              variants={fadeIn("up", 0.4 * (index + 1))}
               className="w-24 h-24 rounded-full mb-6 flex items-center justify-center"
               style={{
                 backgroundColor:
                   index === 0 ? "#F1EFFD" : index === 1 ? "#FEE7E7" : "#FFF3E4",
               }}
             >
-              <div className="text-3xl">{feature.icon}</div>
-            </div>
+              <motion.div
+                variants={fadeIn("up", 0.5 * (index + 1))}
+                className="text-3xl"
+              >
+                {feature.icon}
+              </motion.div>
+            </motion.div>
 
-            <h3 className="text-2xl font-medium mb-3">{feature.title}</h3>
-            <p className="text-gray-500 text-center">{feature.description}</p>
-          </div>
+            <motion.h3
+              variants={textVariant(0.3)}
+              className="text-2xl font-medium mb-3"
+            >
+              {feature.title}
+            </motion.h3>
+            <motion.p
+              variants={fadeIn("up", 0.6 * (index + 1))}
+              className="text-gray-500 text-center"
+            >
+              {feature.description}
+            </motion.p>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* button */}
-      <div className="text-center mt-12">
-        <button className="bg-blue-600 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors relative">
+      <motion.div variants={fadeIn("up", 0.7)} className="text-center mt-12">
+        <motion.button
+          variants={fadeIn("up", 0.8)}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-blue-600 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors relative"
+        >
           Become a Partner
           <div className="absolute -z-10 w-full h-full rounded-full bg-blue-600/50 blur-xl top-0 left-0"></div>
-        </button>
-      </div>
-    </section>
+        </motion.button>
+      </motion.div>
+    </motion.section>
   );
 };
 
