@@ -4,6 +4,7 @@ import FeaturesSection from "./components/FeaturesSection";
 import Hero from "./components/Hero";
 import MonitorSection from "./components/MonitorSection";
 import Navbar from "./components/Navbar";
+import NewsletterSection from "./components/NewsletterSection";
 import PricingSection from "./components/PricingSection";
 import PurposeSection from "./components/PurposeSection";
 import ScheduleSection from './components/ScheduleSection';
@@ -25,6 +26,7 @@ function App() {
         <PricingSection />
         <ServicesSection />
         <TestimonialsSection />
+        <NewsletterSection />
       </div>
     </main>
   );
