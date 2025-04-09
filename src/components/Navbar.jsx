@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { motion } from "framer-motion"
-import { fadeIn } from '../utils/motion';
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,16 +15,20 @@ const Navbar = () => {
   ];
   return (
     <motion.nav
-    variants={fadeIn('down', 0.2)}
-    initial="hidden"
-    whileInView="show"
-    viewport={{once:true}}
-     className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
+      variants={fadeIn("down", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm"
+    >
       <div className="w-full container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 md:h-20 h-16">
         {/* logo */}
         <div className="flex items-center gap-1 cursor-pointer">
           <div className="w-4 h-4 bg-blue-600 rounded-full opacity-75 hover:opacity-100 transition-opacity"></div>
           <div className="w-4 h-4 bg-red-500 -ml-2 rounded-full opacity-100 hover:opacity-75 transition-opacity"></div>
+          <h1 className="text-xl font-bold tracking-tight text-gray-900">
+            <span className="text-indigo-600">Quantro</span>
+          </h1>
         </div>
 
         {/* mobile menu */}
