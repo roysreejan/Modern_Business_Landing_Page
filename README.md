@@ -26,22 +26,28 @@ This project is built using the following technologies and libraries:
 ## Installation
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/roysreejan/Quantro
+   ```
+2. Navigate to the project directory:
+   ```bash
    cd quantro
+   ```
 
-2. Install dependencies:
-   
+3. Install dependencies:
    ```bash
    npm install
+   ```
 
-3. Start the development server:
-
+4. Start the development server:
     ```bash
     npm run dev
+    ```
 
-4. Open your browser and navigate to `http://localhost:5173`.
+5. Open your browser and navigate to   
+   ```
+   http://localhost:5173
+   ```
 
 ## Scripts
 
@@ -52,6 +58,7 @@ This project is built using the following technologies and libraries:
 
 ## Folder Structure
 
+```
 Quantro/
 ├── public/               # Static assets
 │   ├── fav-icon.png       # Favicon for the website
@@ -96,23 +103,24 @@ Quantro/
 ├── [README.md](http://_vscodecontentref_/3)             # Project documentation
 ├── vercel.json           # Vercel deployment configuration
 └── index.html            # HTML template
+```
 
 ## Deployment
 
 This project is configured for deployment on [Vercel](https://vercel.com). The `vercel.json` file ensures that all routes are rewritten to `index.html` for a single-page application.
-The live project is available at: `https://vercel.com/sreejan-roys-projects/quantro`
+The live project is available at: `https://quantro.vercel.app/`
 
 To deploy:
 
 1. Install the Vercel CLI:
-
    ```bash
    npm install -g vercel
+   ```
 
 2. Deploy the project:
-
    ```bash
    vercel
+   ```
 
 ## Acknowledgments
 
